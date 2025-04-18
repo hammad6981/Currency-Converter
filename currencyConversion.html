@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Conversion</title>
+    <link rel="stylesheet" href="./Assests/css/currencyConversion.css">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90%  border-box font-sans antialiased ">
+ 
+
+    <div class="@container flex flex-col justify-center items-center flex-wrap w-auto h-dvh border-2 border-indigo-600">
+
+    <div class="converter  border-red-500 border-2 py-5 my-5 px-2 bg-gray-300  rounded-md shadow-lg ">
+
+    <div class="title">
+           <h1 class="text-purple-800 text-xl font-extrabold ">Currency Converter</h1>       
+    </div>
+
+    <form action="POST">
+        
+        <div class="amount text-black-400 font-medium mt-1 my-1">
+            <p>Enter Amount</p>
+        </div>
+        <input type="text" id="amount" class="amountInput w-75 border-2 border-indigo-600 ps-2" placeholder="Enter Amount"  required>
+        
+        <div class="dropdown flex justify-between  my-5">
+            
+
+<!-- Conversion country whose amount will be converted like PKR  to be converted for USD  -->
+<div class="from">
+                <p class="font-bold my-2">From</p>
+            <div class="select-container">
+                <img src="https://flagsapi.com/US/shiny/64.png" alt="">
+
+            <select name="from" id=""></select>
+
+            </div>                
+        </div>
+
+        <div class="arrow flex justify-center items-center">
+            <i class="fa-solid fa-arrow-right-arrow-left fa-2xl"></i>
+        </div>
+
+<!-- Conversion country where amount will be converted like PKR * USD == final amount -->
+            <div class="to">
+                <p class="font-bold my-2">To</p>  
+            <div class="select-container">
+                <img src="https://flagsapi.com/PK/shiny/64.png" alt="">
+            <select name="to" id=""></select>
+
+            </div>
+
+        </div>
+
+        </div>
+
+        <div class="msg">
+            <p class="my-3 font-bold">1 USD = 278PKR</p>
+        </div>
+
+        <div class="button">
+            <button type="button" class="btn btn-primary font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  px-5 border-0 rounded-md w-50  ">Get Exchange Rate</button>
+        </div>        
+    </div>
+
+    </form>
+    
+</div>
+
+
+   
+    <script src="./Assests/js/currencyConversion.js"></script>
+    <script src="./Assests/js/countryLists.js"></script>
+</body>
+</html>
